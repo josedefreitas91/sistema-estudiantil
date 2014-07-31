@@ -14,3 +14,23 @@ Stack Trace:
 #7 /home/jose/www/sea/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 /home/jose/www/sea/index.php(41): require('/home/jose/www/...')
 #9 {main}
+2014-07-30 22:07:18 Error: [MissingControllerException] Controller class SeaController could not be found.
+Exception Attributes: array (
+  'class' => 'SeaController',
+  'plugin' => NULL,
+)
+Request URL: /
+Stack Trace:
+#0 /home/jose/www/sea/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-30 22:08:40 Error: [MissingActionException] Action SeaController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'SeaController',
+  'action' => 'index',
+)
+Request URL: /
+Stack Trace:
+#0 /home/jose/www/sea/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /home/jose/www/sea/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(SeaController), Object(CakeRequest))
+#2 /home/jose/www/sea/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

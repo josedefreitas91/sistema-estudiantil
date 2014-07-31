@@ -1,0 +1,16 @@
+2014-07-30 19:48:19 Error: [MissingViewException] View file "/home/jose/www/sea/app/View/Pages/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/home/jose/www/sea/app/View/Pages/index.ctp',
+)
+Request URL: /sea/
+Stack Trace:
+#0 /home/jose/www/sea/lib/Cake/View/View.php(468): View->_getViewFileName('index')
+#1 /home/jose/www/sea/lib/Cake/Controller/Controller.php(954): View->render('index', NULL)
+#2 /home/jose/www/sea/app/Controller/PagesController.php(69): Controller->render('index')
+#3 [internal function]: PagesController->display('index')
+#4 /home/jose/www/sea/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /home/jose/www/sea/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 /home/jose/www/sea/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /home/jose/www/sea/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 /home/jose/www/sea/index.php(41): require('/home/jose/www/...')
+#9 {main}

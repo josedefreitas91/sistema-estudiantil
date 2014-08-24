@@ -1,20 +1,4 @@
 @charset "utf-8";
-/**
- *
- * Generic CSS for CakePHP
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.webroot.css
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
 
 * {
 	margin:0;
@@ -23,15 +7,15 @@
 
 /** General Style Info **/
 body {
-	background: #003d4c;
+	background: white; //#003d4c
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
-	font-size:90%;
+	font-size:80%;
 	margin: 0;
 }
 a {
 	color: #003d4c;
-	text-decoration: underline;
+	text-decoration: none; //underline
 	font-weight: bold;
 }
 a:hover {
@@ -75,10 +59,12 @@ p {
 /** Layout **/
 #container {
 	text-align: left;
+        background: #003d4c;
 }
 
 #header{
-	padding: 10px 20px;
+	padding: 60px 20px;
+        background: #003d4c url('../img/header.jpg') no-repeat center;
 }
 #header h1 {
 	line-height:20px;
@@ -97,16 +83,28 @@ p {
 	background: #003d4c;
 	text-decoration: underline;
 }
-#content{
-	background: #fff;
+#content2{
+	background: #003d4c;
 	clear: both;
 	color: #333;
-	padding: 10px 20px 40px 20px;
+	padding: 20px 80px 20px 80px;
+	overflow: auto;
+        //width: 100%;
+}
+#content{
+	background: white;
+	clear: both;
+	color: #333;
+	//padding: 30px 50px 40px 50px;
 	overflow: auto;
 }
 #footer {
-	clear: both;
+        clear: both;
 	padding: 6px 10px;
+        text-align: center;
+        color: grey;
+        margin-top: 50px;
+        background: #003d4c;
 }
 #header a, #footer a {
 	color: #fff;
@@ -142,6 +140,11 @@ table {
 	color: #333;
 	margin-bottom: 10px;
 	width: 100%;
+        /*border-style: solid; //a
+        border-width: 1px; 
+        border-color: #14DFCB;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px #888888;*/ //b
 }
 th {
 	border:0;
@@ -162,9 +165,13 @@ th a.desc:after {
 }
 table tr td {
 	padding: 6px;
-	text-align: left;
+	//text-align: left;
 	vertical-align: top;
 	border-bottom:1px solid #ddd;
+        /*border-style: solid; //a
+        border-width: 1px;
+        border-color: #14DFCB;
+        border-radius: 5px; *///b
 }
 table tr:nth-child(even) {
 	background: #f9f9f9;
@@ -316,9 +323,9 @@ label {
 }
 input, textarea {
 	clear: both;
-	font-size: 140%;
+	font-size: 120%;
 	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
-	padding: 1%;
+	//padding: 1%;
 	width:98%;
 }
 select {
@@ -370,6 +377,26 @@ form .submit input[type=submit] {
 }
 form .submit input[type=submit]:hover {
 	background: #5BA150;
+}
+
+#boton {
+	display: inline;
+	font-size: 110%;
+	width: auto;
+	background:#62af56;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#76BF6B), to(#3B8230));
+	background-image: -webkit-linear-gradient(top, #76BF6B, #3B8230);
+	background-image: -moz-linear-gradient(top, #76BF6B, #3B8230);
+	border-color: #2d6324;
+	color: #fff;
+	text-shadow: rgba(0, 0, 0, 0.5) 0px -1px 0px;
+	padding: 8px 10px;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+#boton:hover {
+	background: none repeat scroll 0 0 #5BA150;
 }
 /* Form errors */
 form .error {
@@ -742,3 +769,4 @@ pre {
 #url-rewriting-warning {
 	display:none;
 }
+

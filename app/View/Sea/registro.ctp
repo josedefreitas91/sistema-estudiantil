@@ -21,9 +21,6 @@
         <td><?php echo $this->Form->input('respuesta_s', array('label' => 'Respuesta Secreta', 'required' => True)); ?></td>
     </tr>
     <tr>
-        <?php echo $this->Form->hidden('online', array('value' => 0)); ?>
-        <?php echo $this->Form->hidden('nivel', array('value' => 1)); ?>
-        <?php echo $this->Form->hidden('estatus', array('value' => 1)); ?>
         <td align="center"><?php echo $this->Form->button('Enviar', array('type' => 'submit', 'id' => array('class' => 'boton'))); ?>
         <?php echo $this->Form->button('Cancelar', array('type' => 'reset', 'id' => array('class' => 'boton'))); ?></td>
         <?php echo $this->Form->end(); ?>

@@ -1,7 +1,7 @@
 <table border='0'>
     <tr bgcolor='#FFFFFF'><th>Registro de Usuario</th></tr>
     <tr>
-        <?php echo $this->Form->create('', array('url' => array('controller' => 'sea', 'action' => 'guardar'))); ?>
+        <?php echo $this->Form->create('Usuario', array('url' => array('controller' => 'sea', 'action' => 'guardar'))); ?>
         <td><?php echo $this->Form->input('nombres',array('label' => 'Nombres', 'required' => True)); ?></td>
     </tr>
     <tr>
@@ -22,7 +22,10 @@
     </tr>
     <tr>
         <td align="center"><?php echo $this->Form->button('Enviar', array('type' => 'submit', 'id' => array('class' => 'boton'))); ?>
-        <?php echo $this->Form->button('Cancelar', array('type' => 'reset', 'id' => array('class' => 'boton'))); ?></td>
-        <?php echo $this->Form->end(); ?>
+            <?php echo $this->Form->end(); ?>
+        <?php //echo $this->Form->button('Cancelar', array('type' => 'reset', 'id' => array('class' => 'boton'))); ?>
+        <?php $url = $this->Html->url(array('controller' => 'Sea', 'action' => 'index'));
+        echo $this->Form->button('Cancelar', array('onclick' => "location.href='".$url."'", 'id' => array('class' => 'boton'))); ?></td>
+        
     </tr>
 </table>

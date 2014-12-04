@@ -87,16 +87,26 @@ p {
 	background: #003d4c;
 	clear: both;
 	color: #333;
-	padding: 20px 80px 20px 80px;
+	padding: 20px 10px 20px 10px;
 	overflow: auto;
-        //width: 100%;
+        width: 98%;
 }
 #content{
 	background: white;
-	clear: both;
+	//clear: both;
 	color: #333;
-	//padding: 30px 50px 40px 50px;
-	overflow: auto;
+	padding: 10px 0px 20px 0px;
+	//overflow: auto;
+        width: 69%;
+        float: right;
+        margin-right: 210px;
+}
+#menuPrin{
+        float: left;
+        //overflow:hidden;
+        display: none;
+        margin-right: -10px;
+        margin-left: -14px
 }
 #footer {
         clear: both;
@@ -167,7 +177,7 @@ table tr td {
 	padding: 6px;
 	//text-align: left;
 	vertical-align: top;
-	border-bottom:1px solid #ddd;
+	//border-bottom:1px solid #ddd;
         /*border-style: solid; //a
         border-width: 1px;
         border-color: #14DFCB;
@@ -770,3 +780,45 @@ pre {
 	display:none;
 }
 
+/*menu acordeon*/
+#menu{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-webkit-box-shadow:1px 1px 3px #888;
+	-moz-box-shadow:1px 1px 3px #888;
+}
+#menu li{border-bottom:1px solid #FFF; list-style: none;}
+#menu ul li, #menu li:last-child{ border:none }
+#menu a{
+	display:block;
+	color:#FFF;
+	text-decoration:none;
+	font-family:'Helvetica', Arial, sans-serif;
+	font-size:13px;
+	padding:9px 9px;
+	text-shadow:1px 1px 1px #325179;
+}
+#menu a:hover{
+	color:#000000;
+	-webkit-transition: color 0.2s linear;
+}
+#menu ul a{background-color:#0584AD;}
+#menu ul a:hover{
+	background-color: #FFF;
+	border-left: 7px solid #0584AD; //color border te link seleccionado #0000FF
+	color:#0000E8;
+	text-shadow:none;
+	-webkit-transition: color, background-color 0.2s linear;
+}
+ul.menu{
+	display:block;
+	background-color:#01a4b7; //2961A9
+	margin:0;
+	padding:0;
+	width:200px;
+	list-style:none;
+}
+#menu ul{background-color:#01a4b7; width:174px;}
+#menu li ul { display:none; }
+/* fin menu acordeon*/

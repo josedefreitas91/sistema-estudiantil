@@ -9,4 +9,4 @@ echo $this->Form->button('Enviar', array('type' => 'submit', 'id' => array('clas
 echo $this->Form->button('Cancelar', array('type' => 'reset', 'id' => array('class' => 'boton')));
 echo $this->Form->end();
 echo "<br>";
-echo $this->Html->link('Registrate!', array('controller'=>'sea','action'=>'registro'));
+echo $this->Html->link('Registrate!', array('controller'=>'Sea', 'action'=>'registro'));

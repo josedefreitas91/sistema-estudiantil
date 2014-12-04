@@ -27,23 +27,49 @@
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-		echo $this->Html->css('cake.generic');
-                echo $this->Html->script(array('jquery-2.1.1', 'jquery.cycle'));
+		echo $this->Html->css(array('cake.generic', 'jquery-ui-1.8.16.custom'));
+                echo $this->Html->script(array('jquery-2.1.1', 'jquery.cycle','jquery-ui-1.8.16.custom.min'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+<script>
+    var j$ = jQuery.noConflict();
+    /*j$(document).ready(function(){
+        j$(".button").button();
+    });*/
+
+    j$(function(){
+        j$('#menu li a').click(function(event){
+            var elem = j$(this).next();
+            if(elem.is('ul')){
+                event.preventDefault();
+                j$('#menu ul:visible').not(elem).slideUp();
+                elem.slideToggle();
+            }
+        });
+
+        j$('#menuIco').click(function(){
+            if (j$('#menuPrin').css('display')=='none'){
+                j$('#menuPrin').show(1200);
+            }else{
+                j$('#menuPrin').hide(1200);
+            }
+        });
+    });
+</script>
 </head>
 <body>
 	<div id="container">
             <a href="/sea"><div id="header"></div></a>
-                <div id="content2">|
+            
+                <div id="content2">
+                    <div id="menuPrin"><?php echo $this->element('menu'); ?></div>
+                    <?php echo $this->Html->image('menuPrin.png', array('alt' => 'Menu', 'width' => '22', 'id' => 'menuIco')); ?>
                     <div id="content">
-
-                            <?php echo $this->Session->flash(); ?>
-
-                            <?php echo $this->fetch('content'); ?>
+                        <?php echo $this->Session->flash(); ?>
+                        <?php echo $this->fetch('content'); ?>
                     </div>
                 </div>
 		<div id="footer">

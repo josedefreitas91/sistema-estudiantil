@@ -6,10 +6,11 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Postgres',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'jose',
-		'password' => 'jose',
+		'login' => 'postgres',
+		'password' => '123456',
 		'database' => 'sea',
 		'prefix' => '',
+                'port' => '5432',
 		//'encoding' => 'utf8',
 	);
         
@@ -17,11 +18,12 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Postgres',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'jose',
-		'password' => 'jose',
+		'login' => 'postgres',
+		'password' => '123456',
 		'database' => 'sea',
                 'schema' => 'auditoria',
 		'prefix' => '',
+                'port' => '5432',
 		//'encoding' => 'utf8',
 	);
         
@@ -29,11 +31,12 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Postgres',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'jose',
-		'password' => 'jose',
+		'login' => 'postgres',
+		'password' => '123456',
 		'database' => 'sea',
                 'schema' => 'seguridad',
 		'prefix' => '',
+                'port' => '5432',
 		//'encoding' => 'utf8',
 	);
 

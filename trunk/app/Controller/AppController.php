@@ -31,4 +31,42 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    public $components = array('DebugKit.Toolbar');
+
+    /*public $components = array(
+        'Session',
+        'Auth' => array(
+            'authenticate' => array(
+                'Form' => array(
+                    'userModel' => 'Usuario',
+                    'fields' => array(
+                        'username' => 'usuario',
+                        'password' => 'clave'
+                    ),
+                ),
+             ),
+            'loginRedirect' => array('controller' => 'sea', 'action' => 'inicio'),
+            'logoutRedirect' => array('controller' => 'sea', 'action' => 'index'),
+            'authError' => 'No puede acceder a esta pagina',
+            //'authorize' => array('Controller'),
+            
+        )
+    );
+    
+    public function isAuthorized($user){
+        return true;
+    }
+    
+    public function beforeFilter() {
+        $this->Auth->allow('index','registro');
+        //$this->Auth->userModel = 'Usuario';
+        //$this->Auth->loginAction = array('admin' => false, 'controller' => 'sea', 'action' => 'logueo');
+        $this->Auth->fields = array(
+            'username' => 'usuario',
+            'password' => 'clave'
+            );
+        //$this->Auth->userScope = array('Usuario.estatus =' => 1);
+    }
+
+    public $helpers = array('Js'=>array('Jquery'), 'Html', 'Form','Session');*/
 }

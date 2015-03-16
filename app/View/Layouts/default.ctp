@@ -74,7 +74,7 @@
                 </div>
 		<div id="footer">
                     
-                    <p>&reg; Derechos Reservados @ CopyRight. 2011-2012</p>
+                    <p>&reg; Derechos Reservados @ CopyRight <?php echo date('Y'); ?></p>
                     <p>WEBMASTER: De Freitas J.</p>
                     
                     <?php /*echo $this->Html->link(
